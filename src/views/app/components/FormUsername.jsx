@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { UserContext } from "../config/UserContext";
+import React, { useContext, useState } from "react"; 
+import { UserContext } from "../../../contexts/UserContext";
 
 const FormUsername = () => {
   const { username, setUsername } = useContext(UserContext);

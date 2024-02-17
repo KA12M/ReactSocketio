@@ -39,6 +39,10 @@ io.on("connection", (client) => {
   console.log("user connected " + client.id);
   io.sockets.emit("receive-message", messageList);
 
+  client.on('get-message', () => {
+    io.sockets.emit('receive-message', messageList);
+  })
+
   // เมื่อ Client ตัดการเชื่อมต่อ
   client.on("disconnect", () => {
     console.log("user disconnected");
